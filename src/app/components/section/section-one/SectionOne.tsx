@@ -16,6 +16,7 @@ import { Label } from "@/components/ui/label";
 import { z } from "zod";
 import { formSchema } from "@/zod-schemes/form.zod";
 import Image from "next/image";
+import Link from "next/link";
 
 const features = [
   "Оплата по одному занятию",
@@ -37,16 +38,31 @@ export function SectionOne() {
       username: "",
       contactMethod: "call",
       phone: "",
-      agree: false,
+      agree: true,
     },
   });
 
-  function onSubmit(values: FormData) {
-    console.log(values);
+  async function onSubmit(values: FormData) {
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (res.ok) {
+        alert("Заявка отправлена!");
+      } else {
+        const errorData = await res.json();
+        alert("Ошибка при отправке: " + errorData.error);
+      }
+    } catch (error) {
+      alert(`Ошибка сети: ${error}`);
+    }
   }
 
   return (
-    <section className="h-[700px] bg-primary-foreground grid grid-cols-2 justify-items-center">
+    <section className="h-[700px] bg-primary-foreground grid grid-cols-2 justify-items-center rounded-lg mx-4">
       {/* Левая часть — текст */}
       <div className="text-center self-center pl-8">
         <p className="text-6xl text-white leading-tight">
@@ -58,7 +74,7 @@ export function SectionOne() {
 
         <p className="text-2xl text-white mt-7 leading-relaxed">
           Выявим и устраним пробелы за все предыдущие классы <br /> с помощью{" "}
-          <span className="text-white bg-yellow-300 rounded-full px-2 mx-1">
+          <span className="text-white bg-violet-400 rounded-full px-2 mx-1">
             индивидуальной программы
           </span>
           , составленной <br />
@@ -69,17 +85,17 @@ export function SectionOne() {
           {features.map((text, i) => (
             <div
               key={i}
-              className="w-36 h-32 bg-white/70 rounded-2xl flex flex-col justify-between p-3"
+              className="w-36 h-32 bg-white/70 rounded-2xl flex flex-col justify-between text-left p-3"
             >
-              <span className="text-xl">💚</span>
-              <p className="text-black/40 font-semibold">{text}</p>
+              <span className="text-xl">🤍</span>
+              <p className="text-violet-400 font-semibold">{text}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Правая часть — форма с ракетой в одном контейнере */}
-      <div className="relative w-[480px] h-[480px] self-center bg-background text-black p-6 rounded-xl shadow-around">
+      <div className="relative w-[480px] min-h-[480px] self-center bg-background text-black p-6 rounded-xl shadow-around">
         {/* Ракета абсолютом внутри контейнера формы */}
         <Image
           src="/3d-rocket2.png"
@@ -168,37 +184,61 @@ export function SectionOne() {
               />
             </div>
 
+            <Button type="submit" className="w-full" variant="default">
+              Отправить
+            </Button>
             <FormField
               control={form.control}
               name="agree"
               render={({ field }) => (
-                <FormItem className="flex items-start space-x-2 space-y-0">
-                  <FormControl>
-                    <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                      id="agree"
-                    />
-                  </FormControl>
-                  <Label htmlFor="agree" className="text-sm leading-snug">
-                    Соглашаюсь с{" "}
-                    <a
-                      href="/privacy"
-                      className="underline text-blue-600"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                <FormItem className="flex flex-col  gap-2 h-full">
+                  <div className="flex justify-center items-center gap-2">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                        id="agree"
+                      />
+                    </FormControl>
+
+                    <Label
+                      htmlFor="agree"
+                      className="block flex-1 w-full text-sm leading-snug whitespace-normal break-words text-black/70"
                     >
-                      политикой конфиденциальности
-                    </a>
-                  </Label>
-                  <FormMessage />
+                      Соглашаюсь с{" "}
+                      <Link
+                        href="/privacy/1"
+                        className="underline text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        офертой{" "}
+                      </Link>
+                      ,
+                      <Link
+                        href="/privacy/1"
+                        className="underline text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        политикой конфиденциальности
+                      </Link>{" "}
+                      и даю согласие на{" "}
+                      <Link
+                        href="/privacy/1"
+                        className="underline text-blue-600"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        обработку персональных данных
+                      </Link>
+                    </Label>
+                  </div>
+
+                  <FormMessage className="ml-6" />
                 </FormItem>
               )}
             />
-
-            <Button type="submit" className="w-full" variant="default">
-              Отправить
-            </Button>
           </form>
         </Form>
       </div>

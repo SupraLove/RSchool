@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import { PRICING_PLANS } from "./price-card.data";
 import { PricingCard } from "./PricingCard";
+import { TabsButton } from "./TabsButton";
 
 export function SectionThree() {
   return (
@@ -9,7 +10,7 @@ export function SectionThree() {
         text="Наши тарифы |"
         highlight="Стоимость зависит от класса ученика"
       />
-
+      <TabsButton />
       <div className="container mx-auto px-4">
         <div className="grid gap-8 md:grid-cols-3">
           {PRICING_PLANS.map((plan) => (

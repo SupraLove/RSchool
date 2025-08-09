@@ -8,7 +8,10 @@ interface Props {
 export function HeaderMenuItem({ item }: Props) {
   return (
     <li className="flex items-center">
-      <Link href={item.href} className="text-black text-3xl hover:text-primary">
+      <Link
+        href={item.href}
+        className="text-black/80 text-xl hover:text-primary"
+      >
         {item.label}
       </Link>
     </li>

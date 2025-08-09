@@ -8,7 +8,7 @@ export const CARDS = [
       "Родительские отчёты после каждого занятия",
       "Поддержка ученика в Telegram 24/7",
     ],
-    image: "/images/online-uroki.jpg",
+    image: "/images/card-1.png",
   },
   {
     title: "Как проходит обучение",
@@ -36,7 +36,7 @@ export const CARDS = [
       "Проходят внутреннюю аттестацию",
       "Постоянная обратная связь",
     ],
-    image: "/images/online-uroki.jpg",
+    image: "/images/card-2.png",
   },
   {
     title: "Отзывы и кейсы",

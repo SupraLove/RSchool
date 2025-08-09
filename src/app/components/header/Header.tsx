@@ -4,10 +4,10 @@ import { HeaderMenuItem } from "./HeaderMenuItem";
 
 export function Header() {
   return (
-    <div className="flex justify-between items-center px-24 py-4">
+    <div className="flex justify-between items-center px-58 py-4 bg-white mx-4 rounded-lg my-4">
       <Image src="/logotip_v4.png" alt="logo" width={145} height={145} />
 
-      <nav className="rounded-full bg-white px-9 py-2 shadow-md">
+      <nav>
         <ul className="flex gap-9 items-center justify-center">
           {HEADER_MENU_DATA.map((item) => (
             <HeaderMenuItem key={item.label} item={item} />
