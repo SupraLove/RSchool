@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev", // твой подтвержденный email
-      to: "ram.krut25@mail.ru", // куда отправляешь
+      to: "ulgusevramil@gmail.com", // куда отправляешь
       subject: "Новая заявка с сайта",
       html: `
         <p>Имя: ${body.username}</p>
