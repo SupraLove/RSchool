@@ -71,30 +71,35 @@ export function SectionOne() {
   }
 
   return (
-    <section className="h-[700px] bg-primary-foreground grid grid-cols-2 justify-items-center rounded-lg mx-4">
+    <section className="h-[700px] bg-primary-foreground grid grid-cols-2 justify-items-center rounded-lg mx-4 md:grid-cols-1 md:h-[900px] sm:h-[1100px]">
       {/* Левая часть — текст */}
-      <div className="text-center self-center pl-8">
-        <p className="text-6xl text-white leading-tight">
+      <div className="text-center self-center xl:pl-0 pl-8 md:mt-4">
+        <p className="text-6xl xl:text-5xl md:text-4xl text-white leading-tight">
           <span className="bg-white/70 rounded-full px-3 text-primary-foreground">
             Индивидуальные
           </span>{" "}
-          онлайн-занятия с репетитором <br /> для 5−11 классов
+          онлайн-занятия с репетитором для 5−11 классов
         </p>
 
-        <p className="text-2xl text-white mt-7 leading-relaxed">
-          Выявим и устраним пробелы за все предыдущие классы <br /> с помощью{" "}
-          <span className="text-white bg-violet-400 rounded-full px-2 mx-1">
-            индивидуальной программы
-          </span>
-          , составленной <br />
-          исходя из интересов ученика
+        <p className="text-2xl text-white lg:text-xl mt-7 md:text-xl leading-relaxed ">
+          <span className="block xl:inline">
+            Выявим и устраним пробелы за все предыдущие классы
+          </span>{" "}
+          <span className="block xl:inline">
+            с помощью{" "}
+            <span className="inline bg-violet-400 rounded-full px-2">
+              индивидуальной программы,
+            </span>{" "}
+            составленной
+          </span>{" "}
+          <span className="block xl:inline">исходя из интересов ученика</span>
         </p>
 
-        <div className="flex gap-8 mt-7 justify-center">
+        <div className="flex gap-8 mt-7 justify-center md:mb-4">
           {features.map((text, i) => (
             <div
               key={i}
-              className="w-36 h-32 bg-white/70 rounded-2xl flex flex-col justify-between text-left p-3"
+              className="w-36 h-32 lg:w-30 lg:h-26 bg-white/70 rounded-2xl flex flex-col justify-between text-left lg:p-0.5  p-3"
             >
               <span className="text-xl">🤍</span>
               <p className="text-violet-400 font-semibold">{text}</p>
@@ -104,14 +109,14 @@ export function SectionOne() {
       </div>
 
       {/* Правая часть — форма с ракетой в одном контейнере */}
-      <div className="relative w-[480px] min-h-[480px] self-center bg-background text-black p-6 rounded-xl shadow-around">
+      <div className="relative lg:w-[380px] w-[480px] min-h-[480px] self-center bg-background text-black p-6 rounded-xl shadow-around">
         {/* Ракета абсолютом внутри контейнера формы */}
         <Image
           src="/3d-rocket2.png"
           alt="rocket"
           width={245}
           height={245}
-          className="absolute -left-36 -top-19 pointer-events-none select-none"
+          className="absolute -left-36 -top-19 md:-left-22 md:-top-10  md:w-40 md:h-40 sm:-left-13 sm:-top-10  sm:w-30 sm:h-30 w-60 h-60 pointer-events-none select-none"
         />
 
         <Form {...form}>
@@ -120,7 +125,7 @@ export function SectionOne() {
             className="space-y-6 relative z-10"
           >
             <div>
-              <h2 className="text-2xl font-semibold text-center">
+              <h2 className="text-2xl lg:text-lg font-semibold text-center">
                 Записаться{" "}
                 <span className="text-primary-foreground">
                   на бесплатное занятие
@@ -225,7 +230,7 @@ export function SectionOne() {
                     >
                       Соглашаюсь с{" "}
                       <Link
-                        href="/privacy/offer"
+                        href="https://drive.google.com/file/d/1eOwPzaoAxDmyPD_htTBI4ujKECeirG3q/preview"
                         className="underline text-blue-600"
                         target="_blank"
                         rel="noopener noreferrer"

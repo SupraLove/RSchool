@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "R School",
+  title: "R School | Онлайн школа ОГЭ/ЕГЭ",
   description: "Онлайн-школа",
 };
 

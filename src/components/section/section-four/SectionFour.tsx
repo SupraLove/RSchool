@@ -13,7 +13,7 @@ export function SectionFour() {
   return (
     <>
       <SectionTitle text="Часто задаваемые вопросы" />
-      <section className="max-w-4xl mx-auto">
+      <section className="max-w-4xl mx-auto md:mx-4">
         <div className="divide-y divide-gray-300">
           {FAQ_DATA.map((item, i) => (
             <FaqItem

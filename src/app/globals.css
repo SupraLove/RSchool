@@ -139,3 +139,30 @@
 .shadow-around {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* мягкая равномерная тень */
 }
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-optical-sizing: auto;
+}
+
+/* html {
+  @apply xl:text-xl;
+} */
+
+@theme {
+  --breakpoint-2xl: initial;
+  --breakpoint-xl: initial;
+  --breakpoint-lg: initial;
+  --breakpoint-md: initial;
+  --breakpoint-sm: initial;
+  --breakpoint-xs: initial;
+  --breakpoint-xxs: initial;
+}
+
+@custom-variant 2xl (@media (max-width: 1650px));
+@custom-variant xl (@media (max-width: 1399px));
+@custom-variant lg (@media (max-width: 1200px));
+@custom-variant md (@media (max-width: 992px));
+@custom-variant sm (@media (max-width: 768px));
+@custom-variant xs (@media (max-width: 480px));
+@custom-variant xxs (@media (max-width: 360px));

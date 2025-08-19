@@ -4,7 +4,7 @@ import { HeaderMenuItem } from "../header/HeaderMenuItem";
 
 export function Footer() {
   return (
-    <div className="w-full h-[460px] bg-white grid md:grid-cols-4 gap-8 border-t-4 border-primary">
+    <div className="w-full bg-white grid grid-cols-4 h-auto sm:grid-cols-2 gap-8 border-t-4 border-primary">
       <div className=" flex flex-col items-center">
         <Image
           src="/logotip_v4.png"
@@ -13,20 +13,20 @@ export function Footer() {
           height={245}
           className="mt-3"
         />
-        <p className="text-2xl text-center mt-4 text-black/70">
+        <p className="text-2xl text-center mt-4 md:text-xl text-black/70">
           Современная образовательная плтаформа, предоставляющая качественное
           обучение в онлайн формате
         </p>
       </div>
       <div className=" text-center flex flex-col">
         <p className="text-2xl mt-6 text-primary">Контакты</p>
-        <p className="text-2xl text-center mt-14 text-black/70">
+        <p className="text-2xl text-center md:text-xl mt-14 text-black/70">
           +7 999 999 99 99
         </p>
-        <p className="text-2xl text-center mt-4 text-black/70">
+        <p className="text-2xl text-center md:text-xl mt-4 text-black/70">
           rschool@mail.ru
         </p>
-        <p className="text-2xl text-center mt-4 text-black/70">
+        <p className="text-2xl text-center md:text-xl mt-4 text-black/70">
           Москва, Центральная д.40
         </p>
       </div>

@@ -12,7 +12,7 @@ export const PricingCard = ({
 }: IPricingCard) => {
   return (
     <div
-      className={`flex flex-col justify-between rounded-2xl border p-6 shadow-around bg-white ${
+      className={`flex flex-col justify-between rounded-2xl border p-6 md:w-[485px] sm:w-[350px] shadow-around bg-white ${
         highlight ? "border-primary" : "border-gray-200"
       }`}
     >

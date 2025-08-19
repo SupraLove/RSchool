@@ -8,7 +8,7 @@ export default function SectionTwo() {
   return (
     <>
       <SectionTitle text="Почему" highlight="мы?" />
-      <div className="grid grid-cols-3 gap-6 max-w-9xl mx-auto px-4 bg-gray-50">
+      <div className="grid grid-cols-3 md:grid-cols-2 gap-6 max-w-9xl mx-auto px-4 bg-gray-50">
         {/* Левая колонка */}
         <div className="flex flex-col gap-6">
           {CARDS.slice(0, 2).map((card, i) => (
@@ -36,11 +36,11 @@ export default function SectionTwo() {
         </div>
 
         {/* Правая колонка */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col md:col-span-2 gap-6">
           <FlipCard
             front={CARDS[4].title}
             back={CARDS[4].back}
-            height="h-[924px]"
+            height="h-[924px] md:h-[350px]"
             img={CARDS[4].image}
           />
         </div>
