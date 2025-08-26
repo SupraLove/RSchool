@@ -4,7 +4,7 @@ export const PRICING_CARDS: IPricingCard[] = [
   {
     id: "1",
     title: "Базовый",
-    price: "2400 ₽ / мес",
+    price: "от 800 ₽",
     description:
       "Оптимальный вариант для стабильного прогресса и обратной связи.",
     features: [
@@ -22,7 +22,7 @@ export const PRICING_CARDS: IPricingCard[] = [
   {
     id: "2",
     title: "Базовый",
-    price: "3400 ₽ / мес",
+    price: "от 800 ₽",
     description:
       "Оптимальный вариант для стабильного прогресса и обратной связи.",
     features: [
@@ -40,7 +40,7 @@ export const PRICING_CARDS: IPricingCard[] = [
   {
     id: "3",
     title: "Базовый",
-    price: "4400 ₽ / мес",
+    price: "от 800 ₽",
     description:
       "Оптимальный вариант для стабильного прогресса и обратной связи.",
     features: [
@@ -58,7 +58,7 @@ export const PRICING_CARDS: IPricingCard[] = [
   {
     id: "4",
     title: "Базовый",
-    price: "5400 ₽ / мес",
+    price: "от 800 ₽",
     description:
       "Оптимальный вариант для стабильного прогресса и обратной связи.",
     features: [
@@ -76,7 +76,7 @@ export const PRICING_CARDS: IPricingCard[] = [
   {
     id: "5",
     title: "Базовый",
-    price: "6400 ₽ / мес",
+    price: "от 800 ₽",
     description:
       "Оптимальный вариант для стабильного прогресса и обратной связи.",
     features: [
@@ -95,7 +95,7 @@ export const PRICING_CARDS: IPricingCard[] = [
   {
     id: "6",
     title: "Базовый",
-    price: "7400 ₽ / мес",
+    price: "от 800 ₽",
     description:
       "Оптимальный вариант для стабильного прогресса и обратной связи.",
     features: [
@@ -114,7 +114,7 @@ export const PRICING_CARDS: IPricingCard[] = [
   {
     id: "7",
     title: "Базовый",
-    price: "6400 ₽ / мес",
+    price: "от 800 ₽",
     description:
       "Оптимальный вариант для стабильного прогресса и обратной связи.",
     features: [

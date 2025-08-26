@@ -14,7 +14,7 @@ export function TabsButton({ selectedId, onSelect }: TabsButtonProps) {
         <Button
           key={grade.id}
           variant={selectedId === grade.id ? "default" : "outline"}
-          className="min-w-[200px] 2xl:min-w-[180px] xl:min-w-[150px] sm:min-w-[165px] lg:min-w-[195px] md:min-w-[150px]"
+          className="min-w-[200px] 2xl:min-w-[180px] xl:min-w-[150px] sm:min-w-[165px] lg:min-w-[195px] md:min-w-[150px] xxs:min-w-[120px]"
           onClick={() => onSelect(grade.id)}
         >
           {grade.title}

@@ -11,7 +11,7 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <h2
-      className={`text-6xl font-bold text-center m-20 text-black/80${
+      className={`text-6xl font-bold xs:text-3xl text-center m-20 text-black/80${
         className || ""
       }`}
     >

@@ -5,6 +5,7 @@ import { HEADER_MENU_DATA } from "./header-menu.data";
 import { HeaderMenuItem } from "./HeaderMenuItem";
 import { HamburgerButton } from "../ui/humburger";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,14 +23,16 @@ export function Header() {
 
   return (
     <div className="flex justify-between items-center lg:px-16 md:px-4 xl:px-32 px-58 py-4 sm:justify-between bg-white mx-4 shadow-sm rounded-lg my-4">
-      <div className="relative lg:w-28 md:w-24  lg:h-16 w-36 h-16">
-        <Image
-          src="/logotip_v4.png"
-          alt="logo"
-          fill
-          className="object-contain"
-        />
-      </div>
+      <Link href="/" className="hover:opacity-80">
+        <div className="relative lg:w-28 md:w-24  lg:h-16 w-36 h-16">
+          <Image
+            src="/logotip_v4.png"
+            alt="logo"
+            fill
+            className="object-contain"
+          />
+        </div>
+      </Link>
 
       <nav>
         <ul className="flex gap-9 lg:gap-5 sm:gap-4 sm:hidden  md:gap-3 items-center justify-center">
