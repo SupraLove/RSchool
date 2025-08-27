@@ -44,6 +44,7 @@
 }
 
 :root {
+  --font-montserrat: var(--font-montserrat);
   --radius: 0.625rem;
   --background: #f9fafb;
   --card: oklch(1 0 0);
@@ -139,10 +140,16 @@
 .shadow-around {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* мягкая равномерная тень */
 }
+
+button {
+  cursor: pointer;
+}
+
 body {
   min-width: 320px;
   min-height: 100vh;
   font-optical-sizing: auto;
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 /* html {
