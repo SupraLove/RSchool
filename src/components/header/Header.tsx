@@ -22,7 +22,7 @@ export function Header() {
   }, [isOpen]);
 
   return (
-    <div className="flex justify-between items-center lg:px-16 md:px-4 xl:px-32 px-58 py-4 sm:justify-between bg-white mx-4 shadow-sm rounded-lg my-4">
+    <div className="flex justify-between items-center lg:px-16 md:px-4 xl:px-32 px-58 py-1 sm:justify-between bg-white mx-4 shadow-sm rounded-lg my-4">
       <Link href="/" className="hover:opacity-80">
         <div className="relative lg:w-28 md:w-24  lg:h-16 w-36 h-16">
           <Image

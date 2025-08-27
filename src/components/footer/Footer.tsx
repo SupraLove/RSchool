@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HEADER_MENU_DATA } from "../header/header-menu.data";
 import { HeaderMenuItem } from "../header/HeaderMenuItem";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -35,8 +36,13 @@ export function Footer() {
           Социальные сети
         </p>
         <div className="flex gap-1 mt-14 justify-center">
-          <Image src="/logo/icons-tg.png" alt="tg" width={45} height={45} />
-          <Image src="/logo/icons-vk.png" alt="tg" width={45} height={45} />
+          <Link href="https://t.me/rschool_edu">
+            <Image src="/logo/icons8-tg.svg" alt="tg" width={45} height={45} />
+          </Link>
+
+          <Link href="https://vk.com/rschooledu">
+            <Image src="/logo/icons8-vk.svg" alt="tg" width={45} height={45} />
+          </Link>
         </div>
       </div>
       <div>
