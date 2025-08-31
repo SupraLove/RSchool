@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 interface Props {
@@ -76,8 +77,9 @@ const FlipCardComponent = ({ front, back, height = "h-48", img }: Props) => {
         {/* BACK */}
         <div className="absolute inset-0 flex flex-col  items-start justify-center bg-white text-black rounded-xl shadow-around backface-hidden rotate-y-180 p-6 space-y-6">
           <BackContent back={back} />
+
           <button
-            className="mt-4 px-4 py-2 bg-violet-400 text-white rounded"
+            className="mt-1 px-4 py-2 bg-violet-400 text-white rounded"
             onClick={() => setFlipped(false)}
           >
             Назад
@@ -91,3 +93,18 @@ const FlipCardComponent = ({ front, back, height = "h-48", img }: Props) => {
 // Memo с displayName
 export const FlipCard = React.memo(FlipCardComponent);
 FlipCard.displayName = "FlipCard";
+
+// <div className="flex flex-col gap-3">
+//           <Link
+//             href="https://vk.com/topic-232142418_54205609"
+//             className="bg-blue-500 text-white rounded-2xl p-2.5 "
+//           >
+//             Перейти к отзывам VK
+//           </Link>
+//           <Link
+//             href="https://www.avito.ru/yoshkar-ola/predlozheniya_uslug/repetitor_po_matematike_informatike_i_fizike_7580334198#open-reviews-list"
+//             className="bg-green-400 text-white rounded-2xl p-2.5 "
+//           >
+//             Перейти к отзывам Avito
+//           </Link>
+//         </div>

@@ -4,7 +4,10 @@ import Image from "next/image";
 
 import SignUpForm from "./SignUpForm";
 
-const features = ["Стоимость занятий закрепляется на весь учебный год"];
+const features = [
+  "Приведи друга - получи бесплатное индивидуальное занятие",
+  "Стоимость занятий закрепляется на весь учебный год",
+];
 
 export function SectionOne() {
   return (
@@ -20,7 +23,7 @@ export function SectionOne() {
 
         <p className="text-2xl text-white lg:text-xl mt-7 md:text-xl xs:text-md mx-auto max-w-[70%] leading-relaxed ">
           <span className="block xl:inline">
-            Выявим и устраним пробелы за все предыдущие классы
+            Устраним пробелы за все предыдущие классы
           </span>{" "}
           <span className="block xl:inline">
             с помощью{" "}
@@ -33,7 +36,7 @@ export function SectionOne() {
           </span>
         </p>
 
-        <div className="flex xs:flex-col xs:items-center gap-8 mt-7 justify-center md:mb-4">
+        <div className="flex flex-col  xs:flex-col xs:items-center gap-5 mt-7 justify-center md:mb-4">
           {features.map((text, i) => (
             <div
               key={i}

@@ -46,13 +46,13 @@ export function Header() {
         {/* Номер */}
         <div
           className={`
-      absolute text-right top-0 left-0 min-w-[200px] h-full flex items-center
+      absolute text-right top-0 left-0 min-w-[210px] h-full flex items-center
       px-4 py-2  rounded-full shadow font-semibold shadow-primary
       transition-all duration-500
       ${show ? "-translate-x-full opacity-100" : "translate-x-0 opacity-0"}
     `}
         >
-          <span className="select-none text-left">📞</span> +7 (999) 123-45-67
+          <span className="select-none text-left">📞</span> +7 (800) 234-56-69
         </div>
 
         {/* Кнопка */}

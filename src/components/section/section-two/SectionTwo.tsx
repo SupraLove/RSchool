@@ -3,6 +3,7 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import { CARDS } from "./cards.data";
 import { FlipCard } from "./FlipCard";
+import Link from "next/link";
 
 export default function SectionTwo() {
   return (

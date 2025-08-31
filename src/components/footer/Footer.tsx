@@ -22,13 +22,10 @@ export function Footer() {
       <div className=" text-center flex flex-col">
         <p className="text-2xl mt-6 text-primary">Контакты</p>
         <p className="text-2xl text-center md:text-xl mt-14 text-black/70">
-          +7 999 999 99 99
+          +7 (800) 234-56-69
         </p>
         <p className="text-2xl text-center md:text-xl mt-4 text-black/70">
-          rschool@mail.ru
-        </p>
-        <p className="text-2xl text-center md:text-xl mt-4 text-black/70">
-          Москва, Центральная д.40
+          rschooledu@mail.ru
         </p>
       </div>
       <div>
