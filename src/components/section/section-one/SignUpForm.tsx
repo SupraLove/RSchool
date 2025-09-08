@@ -234,7 +234,7 @@ export default function SignUpForm() {
                 >
                   Соглашаюсь с{" "}
                   <Link
-                    href="#"
+                    href="https://drive.google.com/file/d/1eOwPzaoAxDmyPD_htTBI4ujKECeirG3q/view?usp=sharing"
                     className="underline text-blue-600"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -243,7 +243,7 @@ export default function SignUpForm() {
                   </Link>
                   ,{" "}
                   <Link
-                    href="#"
+                    href="https://drive.google.com/file/d/16Wi2_WJos9-AN-bPn3zkBBbV0nvZf04x/view?usp=sharing"
                     className="underline text-blue-600"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -252,7 +252,7 @@ export default function SignUpForm() {
                   </Link>{" "}
                   и даю согласие на{" "}
                   <Link
-                    href="#"
+                    href="https://drive.google.com/file/d/1V8joLnU29tY8GKbRdRNexp5UM81hPEta/view?usp=sharing"
                     className="underline text-blue-600"
                     target="_blank"
                     rel="noopener noreferrer"
