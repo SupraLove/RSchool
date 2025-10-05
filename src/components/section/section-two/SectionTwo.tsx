@@ -9,7 +9,8 @@ export default function SectionTwo() {
   return (
     <>
       <SectionTitle text="Почему" highlight="мы?" />
-      <div className="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-6 max-w-9xl  mx-auto px-4 bg-gray-50">
+      <div className="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-6 max-w-9xl mx-auto px-4 bg-gray-50 relative overflow-visible z-0">
+
         {/* Левая колонка */}
         <div className="flex flex-col gap-6 xs:col-span-1">
           {CARDS.slice(0, 2).map((card, i) => (

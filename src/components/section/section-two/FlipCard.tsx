@@ -67,24 +67,24 @@ const FlipCardComponent = ({ front, back, height = "h-48", img }: Props) => {
         }`}
       >
         {/* FRONT */}
-        <div
-          className="absolute cursor-pointer inset-0 flex items-center justify-center rounded-xl text-white  shadow-around backface-hidden overflow-hidden"
-          onClick={() => setFlipped(!flipped)}
-        >
-          <FrontContent front={front} img={img} />
-        </div>
+<div
+  className="card-front cursor-pointer flex items-center justify-center text-white shadow-around backface-hidden"
+  onClick={() => setFlipped(!flipped)}
+>
+  <FrontContent front={front} img={img} />
+</div>
 
-        {/* BACK */}
-        <div className="absolute inset-0 flex flex-col  items-start justify-center bg-white text-black rounded-xl shadow-around backface-hidden rotate-y-180 p-6 space-y-6">
-          <BackContent back={back} />
+{/* BACK */}
+<div className="card-back flex flex-col items-start justify-center bg-white text-black shadow-around backface-hidden rotate-y-180 p-6 space-y-6">
+  <BackContent back={back} />
+  <button
+    className="mt-1 px-4 py-2 bg-violet-400 text-white rounded z-50"
+    onClick={() => setFlipped(false)}
+  >
+    Назад
+  </button>
+</div>
 
-          <button
-            className="mt-1 px-4 py-2 bg-violet-400 text-white rounded"
-            onClick={() => setFlipped(false)}
-          >
-            Назад
-          </button>
-        </div>
       </div>
     </div>
   );
