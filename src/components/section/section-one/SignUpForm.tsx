@@ -34,7 +34,7 @@ export default function SignUpForm() {
       contactMethod: "phone",
       phone: "",
       telegram: "",
-      agree: true,
+      agree: false,
     },
   });
 
@@ -66,7 +66,7 @@ export default function SignUpForm() {
           contactMethod: "phone",
           phone: "",
           telegram: "@",
-          agree: true,
+          agree: false,
         });
       } else {
         const errorData = await res.json();

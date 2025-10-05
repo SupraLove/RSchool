@@ -9,7 +9,6 @@ import Link from "next/link";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -42,30 +41,12 @@ export function Header() {
           ))}
         </ul>
       </nav>
-      <div className="relative inline-block">
-        {/* Номер */}
-        <div
-          className={`
-      absolute text-right top-0 left-0 min-w-[210px] h-full flex items-center
+      <div
+        className="relative   text-right top-0 left-0 min-w-[210px] h-full flex items-center
       px-4 py-2  rounded-full shadow font-semibold shadow-primary
-      transition-all duration-500
-      ${show ? "-translate-x-full opacity-100" : "translate-x-0 opacity-0"}
-    `}
-        >
-          <span className="select-none text-left">📞</span> +7 (800) 234-56-69
-        </div>
-
-        {/* Кнопка */}
-        <button
-          className={`
-      relative z-10 rounded-full bg-black/90 px-4 py-2 text-white md:text-lg text-xl hover:bg-primary
-      transition-transform duration-500 sm:hidden
-      ${show ? "translate-x-7" : "translate-x-0"}
-    `}
-          onClick={() => setShow(!show)}
-        >
-          Консультация
-        </button>
+      transition-all duration-500 xs:hidden"
+      >
+        <span className="select-none text-left ">📞</span> +7 (987) 528-03-86
       </div>
 
       <HamburgerButton onClick={() => setIsOpen(!isOpen)} />

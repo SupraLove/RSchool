@@ -11,7 +11,7 @@ export function HeaderMenuItem({ item, onClick }: Props) {
     <li className="flex items-center">
       <Link
         href={item.href}
-        className="text-black/80 text-xl sm:text-lg hover:text-primary"
+        className="text-black/80 text-xl sm:text-lg md:text-sm 2xl:text-lg hover:text-primary"
         onClick={onClick}
       >
         {item.label}

@@ -6,7 +6,7 @@ export const formSchema = z
     contactMethod: z.enum(["phone", "telegram"]),
     phone: z.string().optional(),
     telegram: z.string().optional(),
-    agree: z.literal(true, { message: "Заполните форму" }),
+    agree: z.literal(true, { message: "Надо заполнить форму" }),
   })
   .superRefine((data, ctx) => {
     if (data.contactMethod === "phone") {
