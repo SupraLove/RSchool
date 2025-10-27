@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer/Footer";
 import { Toaster } from "sonner";
 
 import { Montserrat } from "next/font/google";
+import NetworkWarning from "@/app/networkingWarning/NetworkWarning";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,10 +35,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
+        <NetworkWarning />
         <Header />
         {children}
         <Footer />
