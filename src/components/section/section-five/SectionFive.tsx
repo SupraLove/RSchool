@@ -20,7 +20,6 @@ export function SectionFive() {
           shadow-around
         "
       >
-        {/* Ракета */}
         <Image
           src="/3d-rocket2.png"
           alt="rocket"

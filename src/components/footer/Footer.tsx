@@ -15,8 +15,8 @@ export function Footer() {
           className="mt-3"
         />
         <p className="text-2xl text-center mt-4 md:text-xl text-black/70">
-          Современная образовательная плтаформа, предоставляющая качественное
-          обучение в онлайн формате
+          Современная онлайн-школа, которая предоставляет качественное обучение
+          не выходя из дома
         </p>
       </div>
       <div className=" text-center flex flex-col">
@@ -24,14 +24,13 @@ export function Footer() {
         <p className="text-2xl text-center md:text-xl mt-14 text-black/70">
           +7 (987) 528-03-86
         </p>
-      
       </div>
       <div>
         <p className="text-2xl text-center mt-6 text-primary">
           Социальные сети
         </p>
         <div className="flex gap-1 mt-14 justify-center">
-          <Link href="https://t.me/rschool_edu">
+          <Link href="https://t.me/rschooledu">
             <Image src="/logo/icons8-tg.svg" alt="tg" width={45} height={45} />
           </Link>
 

@@ -60,7 +60,7 @@ export default function SignUpForm() {
       });
 
       if (res.ok) {
-        toast.success("Заявка отправлена!"); // тост при успешной отправке
+        toast.success("Заявка отправлена!");
         form.reset({
           username: "",
           contactMethod: "phone",
@@ -70,10 +70,10 @@ export default function SignUpForm() {
         });
       } else {
         const errorData = await res.json();
-        toast.error("Ошибка при отправке: " + errorData.error); // тост ошибки
+        toast.error("Ошибка при отправке: " + errorData.error);
       }
     } catch (error) {
-      toast.error(`Ошибка сети: ${error}`); // тост ошибки сети
+      toast.error(`Ошибка сети: ${error}`);
     }
   }
 
@@ -83,7 +83,6 @@ export default function SignUpForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6 relative z-10"
       >
-        {/* Заголовок */}
         <div>
           <h2 className="text-2xl lg:text-lg font-semibold text-center">
             Записаться{" "}
@@ -96,7 +95,6 @@ export default function SignUpForm() {
           </p>
         </div>
 
-        {/* Имя */}
         <FormField
           control={form.control}
           name="username"
@@ -110,14 +108,12 @@ export default function SignUpForm() {
           )}
         />
 
-        {/* Метод связи + поле ввода */}
         <div className="flex flex-col space-y-2">
           <FormField
             control={form.control}
             name="contactMethod"
             render={({ field }) => (
               <div className="flex flex-col">
-                {/* Кнопки выбора */}
                 <div className="flex gap-2">
                   {contactMethods.map((m) => (
                     <button
@@ -135,7 +131,6 @@ export default function SignUpForm() {
                   ))}
                 </div>
 
-                {/* Подсказка для Телеграм */}
                 {field.value === "telegram" && (
                   <span className="mt-1 text-xs text-gray-500 px-0.5">
                     Убедитесь, что в Telegram в разделе Настройки →
@@ -147,7 +142,6 @@ export default function SignUpForm() {
             )}
           />
 
-          {/* Поле ввода */}
           {method === "phone" && (
             <FormField
               control={form.control}
@@ -201,7 +195,6 @@ export default function SignUpForm() {
           )}
         </div>
 
-        {/* Кнопка отправки */}
         <Button
           type="submit"
           className={cn(
@@ -214,7 +207,6 @@ export default function SignUpForm() {
           Отправить
         </Button>
 
-        {/* Согласие */}
         <FormField
           control={form.control}
           name="agree"

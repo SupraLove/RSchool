@@ -25,7 +25,6 @@ export function SectionOne() {
         md:grid-cols-1 md:h-auto md:py-10 
       "
     >
-      {/* Левая часть — текст */}
       <div className="text-center self-center pl-8 xl:pl-0 sm:pl-0 sm:order-1">
         <p className="text-6xl 2xl:text-4xl xl:text-5xl lg:text-2xl md:text-4xl sm:text-2xl mx-auto max-w-[80%] text-white leading-tight">
           <span className="bg-white/70 rounded-full 2xl:text-3xl px-3 text-primary-foreground">
@@ -35,45 +34,34 @@ export function SectionOne() {
         </p>
 
         <p className="text-2xl text-white lg:text-xl mt-7 sm:text-lg mx-auto max-w-[70%] leading-relaxed">
-          <span className="block xl:inline">
-            Устраним пробелы за все предыдущие классы
+          <span className="inline bg-violet-400 rounded-full px-2">
+            Когда всё внимание - только Вам!
           </span>{" "}
-          <span className="block xl:inline">
-            с помощью{" "}
-            <span className="inline bg-violet-400 rounded-full px-2">
-              индивидуальной программы,
-            </span>{" "}
-          </span>{" "}
-          <span className="block xl:inline">
-            составленной исходя из интересов ученика
-          </span>
         </p>
 
-       <div className="flex flex-col gap-5 mt-7 justify-center sm:items-center">
-  {features.map((text, i) => (
-    <div
-      key={i}
-      className="
+        <div className="flex flex-col gap-5 mt-7 justify-center sm:items-center">
+          {features.map((text, i) => (
+            <div
+              key={i}
+              className="
         bg-white/70 rounded-2xl 
         flex flex-col justify-between text-left 
         p-3 
         w-[85%] max-w-[600px] mx-auto
         sm:w-[90%] sm:max-w-[340px]
       "
-    >
-      <div className="flex items-center gap-2 justify-center">
-        <span className="text-xl">🤍</span>
-        <p className="text-violet-400 font-semibold sm:text-center">
-          {text}
-        </p>
+            >
+              <div className="flex items-center gap-2 justify-center">
+                <span className="text-xl">🤍</span>
+                <p className="text-violet-400 font-semibold sm:text-center">
+                  {text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  ))}
-</div>
 
-      </div>
-
-      {/* Правая часть — форма */}
       <div
         className="
           relative 

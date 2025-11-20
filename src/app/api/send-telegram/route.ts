@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const body = await request.json();
   console.log("Получены данные:", body);
 
-  const contact = body.contact; // <-- берем поле contact напрямую
+  const contact = body.contact;
 
   try {
     const message = `

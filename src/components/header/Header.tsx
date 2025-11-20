@@ -51,7 +51,6 @@ export function Header() {
 
       <HamburgerButton onClick={() => setIsOpen(!isOpen)} />
 
-      {/* Сайдбар */}
       <div
         className={`fixed top-0 right-0 h-full w-full bg-white z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -66,13 +65,14 @@ export function Header() {
           </button>
         </div>
         <ul className="flex flex-col items-center justify-center gap-6 mt-16 text-xl">
-           <div
-        className="relative   text-right top-0 left-0 min-w-[210px] h-full flex items-center
+          <div
+            className="relative   text-right top-0 left-0 min-w-[210px] h-full flex items-center
       px-4 py-2  rounded-full shadow font-semibold shadow-primary
       transition-all duration-500 "
-      >
-        <span className="select-none text-left ">📞</span> +7 (987) 528-03-86
-      </div>
+          >
+            <span className="select-none text-left ">📞</span> +7 (987)
+            528-03-86
+          </div>
           {HEADER_MENU_DATA.map((item) => (
             <HeaderMenuItem
               key={item.label}

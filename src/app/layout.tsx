@@ -24,8 +24,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "R School | Онлайн школа ОГЭ/ЕГЭ",
+  title: "R School | Онлайн-школа ОГЭ/ЕГЭ",
   description: "Онлайн-школа",
+  icons: {
+    icon: "/logo/icon.png",
+  },
 };
 
 export default function RootLayout({
