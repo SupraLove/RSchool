@@ -15,8 +15,8 @@ export function Footer() {
           className="mt-3"
         />
         <p className="text-2xl text-center mt-4 md:text-xl text-black/70">
-          Современная онлайн-школа, которая предоставляет качественное обучение
-          не выходя из дома
+          Современная онлайн-школа Rschool, которая предоставляет качественное
+          обучение не выходя из дома
         </p>
       </div>
       <div className=" text-center flex flex-col">
